@@ -1,0 +1,11 @@
+This is a placeholder for the favicon.ico file.
+
+To create a proper favicon:
+1. Convert the LazySlide logo to an .ico file format
+2. Name it favicon.ico
+3. Place it in the public directory
+
+For the actual deployment, you can generate a favicon from the logo at:
+https://raw.githubusercontent.com/rendeirolab/lazyslide/main/assets/logo@3x.png
+
+Using an online tool like https://favicon.io/ or similar services.
