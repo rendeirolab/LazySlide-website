@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { CSSProperties } from 'react';
 import { 
   Container, 
   Title, 
@@ -18,7 +19,7 @@ import {
 import { IconCheck, IconCopy, IconBrandGithub, IconBook } from '@tabler/icons-react';
 
 // Create styles object for inline styling
-const styles = {
+const styles: { [key: string]: CSSProperties } = {
   wrapper: {
     minHeight: '100vh',
     background: 'linear-gradient(180deg, var(--mantine-color-primary-0) 0%, var(--mantine-color-white) 100%)',
@@ -134,7 +135,7 @@ export default function Home() {
             Accessible and interoperable whole slide image analysis
           </Text>
 
-          <Stack spacing="xl" align="center" mb={40}>
+          <Stack gap="xl" align="center" mb={40}>
             <Box style={styles.installCommand}>
               pip install lazyslide
               <CopyButton value="pip install lazyslide" timeout={2000}>
@@ -154,10 +155,10 @@ export default function Home() {
           </Stack>
 
           <Center>
-            <Group spacing="md">
+            <Group gap="md">
               <Button 
                 style={styles.button}
-                leftIcon={<IconBrandGithub size={20} />}
+                leftSection={<IconBrandGithub size={20} />}
                 component="a"
                 href="https://github.com/rendeirolab/lazyslide"
                 target="_blank"
@@ -168,7 +169,7 @@ export default function Home() {
 
               <Button 
                 style={styles.buttonSecondary}
-                leftIcon={<IconBook size={20} />}
+                leftSection={<IconBook size={20} />}
                 component="a"
                 href="https://lazyslide.readthedocs.io"
                 target="_blank"
@@ -180,11 +181,11 @@ export default function Home() {
           </Center>
 
           <Box mt={60}>
-            <Text align="center" size="lg" mb={20}>
+            <Text ta="center" size="lg" mb={20}>
               A Python framework for whole slide image (WSI) analysis, designed to integrate seamlessly with the scverse ecosystem.
             </Text>
 
-            <Text align="center" size="md">
+            <Text ta="center" size="md">
               By adopting standardized data structures and APIs familiar to the single-cell and genomics community, 
               LazySlide enables intuitive, interoperable, and reproducible workflows for histological analysis.
             </Text>
